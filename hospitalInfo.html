@@ -28,6 +28,96 @@
 
     <!-- Template Stylesheet-->
     <link href="css/style.css" rel="stylesheet"> 
+
+    <style>
+
+
+    #sub3 {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    background-color: #f1f1f1;
+    width: 40%;
+    padding: 10px;
+    color: black;
+    border: #020202 2px solid;
+    display: none;
+    border-radius: 10px;
+    }
+    @media screen and (min-width: 480px) {
+        #sub3 {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    background-color: #f1f1f1;
+    width: 80%;
+    padding: 10px;
+    color: black;
+    border: #020202 2px solid;
+    display: none;
+    border-radius: 10px;
+    }
+}
+
+    #bt1 {
+        background-color: #1c87c9;
+        -webkit-border-radius: 60px;
+        border-radius: 60px;
+        border: none;
+        color: #eeeeee;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 15px;
+        padding: 5px 15px;
+        text-align: center;
+        text-decoration: none;
+      }
+      @keyframes glowing {
+        0% {
+          background-color: #a80505;
+          box-shadow: 0 0 5px #a80505;
+        }
+        50% {
+          background-color: #e81919;
+          box-shadow: 0 0 20px #e81919;
+        }
+        100% {
+          background-color: #a80505;
+          box-shadow: 0 0 5px #a80505;
+        }
+      }
+      #bt1 {
+        animation: glowing 1300ms infinite;
+      }
+    #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            padding-top: 20px;
+            }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 10px;
+            }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #23233e;
+            color: white;
+            }
+        #customer{
+            padding-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -101,8 +191,9 @@
 <!-- Navbar End -->
 
 <!-- Login Start -->
-    <div class="container-fluid ">
+    <div class="container-fluid " style="display: none;">
         <div class="container">
+            
             <div class="row gx-5">
                 <div class="col-lg-3 mb-5 mb-lg-0">
                     
@@ -113,27 +204,7 @@
                         <h1 class="mb-4">Login</h1>
                         <form>
                             <div class="row g-3">
-                                <!-- <div class="col-12 col-sm-12">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Choose Blood Group</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                    </select>
-                                </div> -->
-                                <!-- <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
-                                </div> -->
+                              
                                 
                                 <div class="col-12 col-sm-12">
                                     <input type="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;" required>
@@ -156,6 +227,134 @@
     <!-- Login end -->
 
     <!-- Hospital info start -->
+    <div class="container-fluid ">
+        <div class="container">
+            <div style="text-align: right;">
+                <input type=button name=type id='bt1' value='Show Urgent Request' 
+     onclick="setVisibility('sub3');";> 
+            </div> 
+            <div id="sub3">
+                <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                
+                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Urgent Request Pending</h5>
+                    <h5 class="fw-normal">No one is useless in this world who lightens the burdens of another.</h5>
+
+                    <div class="container" id="customer">
+                        <table id="customers">
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>Blood Group</th>
+                                <th>Contact</th>
+                            </tr>
+                            <tr>
+                                <td>Saad Razzaq</td>
+                                <td>A+</td>
+                                <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="tel:+923184202899"><i class="fa fa-phone"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>Shoaib Aslam</td>
+                                <td>A+</td>
+                                <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                            
+                            </tr>
+                            <tr>
+                                <td>Rida Muzayyan</td>
+                                <td>1A+</td>
+                                <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                            
+                            </tr>
+                            </table>
+                    
+                        </div>
+                </div>
+            </div>
+            <script language="JavaScript">
+                function setVisibility(id) {
+                if(document.getElementById('bt1').value=='Hide Request'){
+                document.getElementById('bt1').value = 'Show Urgent Request';
+                document.getElementById(id).style.display = 'none';
+                }else{
+                document.getElementById('bt1').value = 'Hide Request';
+                document.getElementById(id).style.display = 'inline';
+                }
+                }
+                
+                </script>
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blood Bank Info</h5>
+                <h3 class="display-4 mb-4">Shifa International Hospital (SIH)</h3>
+                <h5 class="fw-normal">Good health is not something we can buy. However, it can be an extremely valuable savings account.</h5>
+            </div>
+
+            <div class="container" id="customer">
+                <table id="customers">
+                    <tr>
+                        <th>Blood Group Name</th>
+                        <th>Blood Bags</th>
+                        <th>Transport Avaiablity</th>
+                        <th>Contact</th>
+                    </tr>
+                    <tr>
+                        <td>A+</td>
+                        <td>10</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="tel:+923184202899"><i class="fa fa-phone"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>B+</td>
+                        <td>11</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>AB+</td>
+                        <td>10</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>O+</td>
+                        <td>8</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    </tr>
+                    <tr>
+                        <td>A-</td>
+                        <td>12</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>B-</td>
+                        <td>12</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>AB-</td>
+                        <td>12</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    <tr>
+                        <td>O-</td>
+                        <td>6</td>
+                        <td>Yes</td>
+                        <td><a class="btn btn-lg btn-primary btn-lg-square rounded-circle me-3" href="#"><i class="fa fa-phone"></i></a></td>
+                    
+                    </tr>
+                    </table>
+            
+                </div>
+            
+        </div>
+    </div>
 
 
     <!-- Hospital info end  -->
