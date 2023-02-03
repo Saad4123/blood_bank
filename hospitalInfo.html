@@ -32,7 +32,7 @@
     <style>
 
 
-    #sub3 {
+#sub3 {
     position: absolute;
     left: 50%;
     top: 40%;
@@ -44,22 +44,31 @@
     display: none;
     border-radius: 10px;
     }
-    @media screen and (min-width: 480px) {
+@media(max-width: 600px) {
         #sub3 {
-    position: absolute;
     left: 10%;
     top: 30%;
-    background-color: #f1f1f1;
     width: 80%;
+   
+    }
+}
+#sub {
+    position: absolute;
+    background-color: #f1f1f1;
+    top: 80%;
+    left: 20%;
+    width: 75%;
     padding: 10px;
     color: black;
     border: #020202 2px solid;
     display: none;
     border-radius: 10px;
     }
-}
+    
+    
 
     #bt1 {
+        height: 40px;
         background-color: #1c87c9;
         -webkit-border-radius: 60px;
         border-radius: 60px;
@@ -191,7 +200,7 @@
 <!-- Navbar End -->
 
 <!-- Login Start -->
-    <div class="container-fluid " style="display: none;">
+    <div class="container-fluid" id="hLogin">
         <div class="container">
             
             <div class="row gx-5">
@@ -214,7 +223,7 @@
                                 </div>
                                 
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
+                                    <button class="btn btn-primary w-100 py-3" id="login"type="submit">Login</button>
                                     </div>
                             </div>
                         </form>
@@ -226,7 +235,22 @@
 
     <!-- Login end -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#info").hide();
+          $("#login").click(function(){
+            $("#hLogin").hide();
+            $("#info").show();
+          });
+          
+          
+        });
+    </script>
+
     <!-- Hospital info start -->
+
+    <div id="info">
     <div class="container-fluid ">
         <div class="container">
             <div style="text-align: right;">
@@ -350,12 +374,109 @@
                     
                     </tr>
                     </table>
-            
+                    <div style="text-align: right; margin-top: 15px;">
+                    <h5 class="fw-normal">If you want to upgrade detail then, <button id="btn2" class=" btn btn-light rounded-pill py-md-3 px-md-5 mx-2" style="height: 40%;  color: #23233e;">Click Here</button>  </h5>
+                </div>
                 </div>
             
         </div>
     </div>
 
+    <div id="updateInfo" class="container w-75 bg-light text-center rounded pb-5 px-5" style="display: none;">
+        <div style="text-align: right;"><button  id="btn3"class="btn btn-lg btn-light btn-lg-square rounded-circle "value="Hide Request" style=" color: #23233e;"><i class="fa fa-times"></i></button></div>
+        <h1 class="mb-4">Upgrade Your Hospital Info</h1>
+        <form>
+            <div class="row g-3">
+                <div class="col-12 col-sm-12">
+                    <input type="text" class="form-control bg-white border-0" value="Shifa International Hospital (SIH)" style="height: 55px;">
+                    <!-- <select class="form-select bg-white border-0" style="height: 55px;">
+                        <option selected>Choose Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select> -->
+                </div>
+                <!-- <div class="col-12 col-sm-6">
+                    <select class="form-select bg-white border-0" style="height: 55px;">
+                        <option selected>Select Doctor</option>
+                        <option value="1">Doctor 1</option>
+                        <option value="2">Doctor 2</option>
+                        <option value="3">Doctor 3</option>
+                    </select>
+                </div> -->
+
+                <div class="col-12 col-sm-12">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Transportation is available" style="height: 55px;">
+                </div>
+                
+                <div class="col-12 col-sm-12">
+                    <input type="email" class="form-control bg-white border-0" value="SIH@gmail.com" style="height: 55px;">
+                </div>
+                
+                <p style="margin-top: 10px; color:#1D2A4D">Enter no. of blood bags According to blood group</p>
+
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of A+" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of A-" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of AB+" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of AB-" style="height: 55px;">
+                </div>
+
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of B+" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of B-" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of O+" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Blood bags of O-" style="height: 55px;">
+                </div>
+                
+                <div class="col-12 col-sm-6">
+                    <input type="text" class="form-control bg-white border-0" placeholder="Address" style="height: 55px;">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <div class="date" id="date" data-target-input="nearest">
+                        <input type="text"
+                            class="form-control bg-white border-0 datetimepicker-input"
+                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary w-100 py-3" type="submit">Update</button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#updateInfo").hide();
+          $("#btn2").click(function(){
+            $("#updateInfo").show();
+          });
+          $("#btn3").click(function(){
+            $("#updateInfo").hide();
+          });
+          
+        });
+    </script>
+
+</div>
 
     <!-- Hospital info end  -->
 
@@ -439,6 +560,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
