@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MEDINOVA - Hospital Website Template</title>
+    <title>Relive - Blood Bank Management System</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -28,6 +28,43 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            padding-top: 20px;
+            border-radius: 10px;
+            }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            border-radius: 10px;
+            }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: center;
+            background-color: #23233e;
+            color: white;
+            }
+        #customers tr {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 10px;
+            }
+        #customer{
+            padding-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
@@ -72,7 +109,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
                 <a href="index.html" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>Medinova</h1>
+                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>reLive</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -176,64 +213,20 @@
             <div class="row gx-5">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="mb-4">
-                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Add Urgent Request</h5>
-                        <h1 class="display-4">You only live once, but if you do it right, once is enough.</h1>
+                        <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Blood Safety and Matching</h5>
+                        <h1 class="display-4">Donor Safety</h1>
                     </div>
-                    <p class="text-white mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                    <a class="btn btn-dark rounded-pill py-3 px-5 me-3" href="">Find Donor</a>
-                    <a class="btn btn-outline-dark rounded-pill py-3 px-5" href="">Read More</a>
+                    <p class="text-white mb-5">If the donor is found suitable for donating blood, approximately one pint of blood is collected from an arm vein into a plastic bag. This is normally well tolerated by the donor, since the average donor’s blood volume is about 11 pints. The donor will produce replacement fluid for the blood donation within 24 hours and red blood cells in four to six weeks. At least eight weeks between donations are therefore required for whole blood donations.<br>
+                        Complications of blood donations are uncommon and usually minor. Fainting is typically the most significant complication encountered. This can be minimized by requiring the donor to wait a short period of time after donation before standing, and to eat and drink fluids before leaving the donor area. Minor bruising at the needle site may also occur.</p>
                 </div>
                 <div class="col-lg-6">
-                    <div class="bg-white text-center rounded p-5">
-                        <h1 class="mb-4">Add Urgent Request</h1>
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-12">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Choose Blood Group</option>
-                                        <option value="A+">A+</option>
-                                        <option value="A-">A-</option>
-                                        <option value="B+">B+</option>
-                                        <option value="B-">B-</option>
-                                        <option value="O+">O+</option>
-                                        <option value="O-">O-</option>
-                                        <option value="AB+">AB+</option>
-                                        <option value="AB-">AB-</option>
-                                    </select>
-                                </div>
-                                <!-- <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-white border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
-                                </div> -->
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <input type="text" 
-                                        class="form-control bg-white border-0 datetimepicker-input"
-                                            placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <div class="time" id="time" data-target-input="nearest">
-                                        <input type="text" 
-                                            class="form-control bg-white border-0 datetimepicker-input"
-                                            placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div class="bg-white text-justify rounded p-5">
+                        <h1 class="mb-4">Recipient Safety</h1>
+                        
+                        <p class="mb-5">Risks for a person receiving blood can be divided into several categories, which include reactions due to incompatible blood types, allergic reactions, and infections in the donated blood. By strictly adhering to standardized procedures, these risks have been reduced to a minimum.</p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="">Find Doonor</a>
+                        <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="">Read More</a>
+                    
                     </div>
                 </div>
             </div>
@@ -245,84 +238,61 @@
     <!-- Pricing Plan Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Medical Packages</h5>
-                <h1 class="display-4">Awesome Medical Programs</h1>
+            <div class="text-center mx-auto mb-5">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blood Safety and Matching </h5>
+                <h1 class="display-4">Blood Type Matching</h1>
+                
             </div>
-            <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
-                <div class="bg-light rounded text-center">
-                    <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
-                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
-                            <h3 class="text-white">Pregnancy Care</h3>
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">$</small>49<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Year</small>
-                            </h1>
-                        </div>
+            <div class=" mx-auto mb-5" style="max-width: 80%; text-align: justify; align-items: center;">
+                <p>
+                    Persons with a given antigen do not make antibodies against their own antigen, but will against the other antigens in that group. For example, if a person has type A blood, he (or she) will make antibodies against the B antigen, but not against the A antigen. That means that if this person is given either type B red blood cells or type AB red blood cells, his or her antibodies will attack and destroy the foreign red cells possessing the B antigen, causing a transfusion reaction. Similarly, a person having the RhD antigen will not make antibodies against RhD antigen, but the RhD negative person will make antibodies against blood with RhD positive red cells.
+                    <br>Antibodies in the plasma of donors with different blood types cause a reverse situation. For example, since a person with Type AB blood makes no antibodies against Type A or Type B cells, his or her plasma can be given to a person with Type A, Type B, Type AB, or Type O blood.
+                </p>
+
+                <div class="container" id="customer">
+                    <table id="customers">
+                        <tr>
+                            <th>Recipient Blood Type</th>
+                            <th>Matching Donor Blood Type</th>
+                            
+                        </tr>
+                        <tr>
+                            <td>A+ </td>
+                            <td>A+, A-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>A-</td>
+                            <td>A-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>B+</td>
+                            <td>B+, B-, O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>B-</td>
+                            <td>B-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>AB+</td>
+                            <td>Compatible with all blood types</td>
+                        </tr>
+                        <tr>
+                            <td>AB-</td>
+                            <td>AB-, A-, B-, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O+</td>
+                            <td>O+, O-</td>
+                        </tr>
+                        <tr>
+                            <td>O-</td>
+                            <td>O-</td>
+                        </tr>
+                        </table>
+                
                     </div>
-                    <div class="text-center py-5">
-                        <p>Emergency Medical Treatment</p>
-                        <p>Highly Experienced Doctors</p>
-                        <p>Highest Success Rate</p>
-                        <p>Telephone Service</p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
-                    </div>
-                </div>
-                <div class="bg-light rounded text-center">
-                    <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
-                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
-                            <h3 class="text-white">Health Checkup</h3>
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">$</small>99<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Year</small>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="text-center py-5">
-                        <p>Emergency Medical Treatment</p>
-                        <p>Highly Experienced Doctors</p>
-                        <p>Highest Success Rate</p>
-                        <p>Telephone Service</p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
-                    </div>
-                </div>
-                <div class="bg-light rounded text-center">
-                    <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-3.jpg" alt="">
-                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
-                            <h3 class="text-white">Dental Care</h3>
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">$</small>149<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Year</small>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="text-center py-5">
-                        <p>Emergency Medical Treatment</p>
-                        <p>Highly Experienced Doctors</p>
-                        <p>Highest Success Rate</p>
-                        <p>Telephone Service</p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
-                    </div>
-                </div>
-                <div class="bg-light rounded text-center">
-                    <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-4.jpg" alt="">
-                        <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
-                            <h3 class="text-white">Operation & Surgery</h3>
-                            <h1 class="display-4 text-white mb-0">
-                                <small class="align-top fw-normal" style="font-size: 22px; line-height: 45px;">$</small>199<small class="align-bottom fw-normal" style="font-size: 16px; line-height: 40px;">/ Year</small>
-                            </h1>
-                        </div>
-                    </div>
-                    <div class="text-center py-5">
-                        <p>Emergency Medical Treatment</p>
-                        <p>Highly Experienced Doctors</p>
-                        <p>Highest Success Rate</p>
-                        <p>Telephone Service</p>
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 my-2">Apply Now</a>
-                    </div>
-                </div>
             </div>
+            
         </div>
     </div>
     <!-- Pricing Plan End -->
